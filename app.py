@@ -26,8 +26,10 @@ model=KNeighborsClassifier()
 model.fit(ndata,lis)
 op=model.predict([[ip1,ip2,ip3,ip4]])
 if op==0:
-  st.write("Iris Setosa")
+  out="Iris Setosa"
 elif op==1:
-  st.write("Iris Versicolor")
+  out="Iris Versicolor"
 elif op==2:
-  st.write("Iris Virginica")
+  out="Iris Virginica"
+if st.button('Predict'):
+  st.title(out)
